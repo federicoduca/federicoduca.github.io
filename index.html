@@ -1,41 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-
-  <!-- Page Information
+  <head>
+    <!-- Page Information
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta charset="utf-8">
-  <title>Federico Duca</title>
-  <meta name="description" content="">
-  <meta name="author" content="">
+    <meta charset="utf-8" />
+    <title>Federico Duca</title>
+    <meta name="description" content="Federico Duca | LittleLink" />
+    <meta name="author" content="Federico Duca" />
 
-  <!-- Mobile Specific Metas
+    <!-- Mobile Specific Metas
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- FONT
+    <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap" rel="stylesheet">
+    <!-- <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap"
+      rel="stylesheet"
+    /> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600&display=swap"
+      rel="stylesheet"
+    />
 
-
-  <!-- CSS
+    <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/skeleton-dark.css">
-  <!-- css/skeleton-auto.css - css/skeleton-light.css - css/skeleton-dark.css -->
-  <link rel="stylesheet" href="css/brands.css">
+    <!-- <link rel="stylesheet" href="css/normalize.css" /> -->
+    <link rel="stylesheet" href="css/main.css" />
+    <!-- <link rel="stylesheet" href="css/skeleton-auto.css" /> -->
+    <!-- css/skeleton-auto.css - css/skeleton-light.css - css/skeleton-dark.css -->
+    <!-- <link rel="stylesheet" href="css/brands.css" /> -->
 
-
-  <!-- Favicon
+    <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <link rel="icon" type="image/png" href="images/avatar.png">
+    <link rel="icon" type="image/png" href="images/littlelink.png" />
+  </head>
 
-</head>
-
-<body>
-
-  <!-- ## Getting Started with LittleLink
+  <body>
+    <!-- ## Getting Started with LittleLink
     This page has been built with every pre-designed button available in LittleLink by default. You can rearrange and delete as needed.
     You can add your own brand or others brands you may need in the `css/brands.css` file. 
     You can add custom icons to `icons/...`. It is recommended to use a 24x24 .SVG.
@@ -44,84 +48,89 @@
     Edit the "Short Bio" section tell users about yourself or your brand.
   -->
 
-  <!-- Primary Page Layout
+    <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-  <div class="container">
-    <div class="row">
-      <div class="column" style="margin-top: 10%">
+    <div class="container">
+      <!-- Your Image Here -->
+      <img class="avatar" src="images/20240201_213431.jpg" alt="Selfie" />
 
-        <!-- Your Image Here -->
-        <style>
-          img.avatar {
-            /* border: 2px solid white; */
-            border-radius: 50%;
-          }
-        </style>
-        <img src="images/avatar@2x.png" alt="Selfie" class="avatar">
-        <!-- srcset="images/avatar@2x.png 2x" -->
+      <!-- Title -->
+      <h2>Federico Duca</h2>
 
-        <!-- Title -->
-        <h2>Federico Duca</h2>
+      <!-- Short Bio -->
+      <p class="bio">Data Enthusiast 😊 | @Squadra Labs</p>
 
-        <!-- Short Bio -->
-        <h3>Welcome 😊</h3>
-        <p> Would you like to know me a little?</p>
+      <!-- <p>
+        Dark/Light Mode
+        <input type="checkbox" id="theme-toggle" />
+        <label for="theme-toggle" class="theme-toggle-label"></label>
+      </p> -->
 
-        <!--## Breaking down <a> attributes:
-          
-          1.) class="button button-default" | The first "button" here is telling this <a> tag that it should make this element a button and applies the default styling in `css/brands.css`.
-          The second portion, button-default, is declaring the specific brand style you would like to apply. Here we're applying the "default" style and color.
-          If you want to make this button to use the brand colors for Discord, just change "button-default" to "button-discord". Brands are found in `css/brands.css`. You can always edit & add your own there.
+      <!-- Sections -->
+      <section class="contact">
+        <h3>Contact</h3>
 
-          2.) Replace the # in href="#" with the desired target URL for the button.
+        <a class="button" href="mailto:f.duca.a@gmail.com"
+          ><img class="icon" src="icons/email.svg" /> Contact via mail</a
+        >
 
-          3.) target="_blank" | This attribute opens links in a new tab. Remove this attribute to prevent links from opening in a new tab.
+        <a class="button" href="https://zcal.co/federicoduca"
+          ><img class="icon" src="icons/generic-calendar.svg" /> Schedule a
+          meeting</a
+        >
 
-          4.) rel="noopener" | This attribute instructs the browser to navigate to the target resource without granting the new browsing context access to the document that opened it.
-          This is especially useful when opening untrusted links. https://developer.mozilla.org/en-US/docs/Web/HTML/Link_types/noopener
+        <!-- <a class="button" href="https://www.gitlab.com/federicoduca"
+          ><img class="icon" src="icons/read-cv.svg" /> Read CV</a
+        > -->
+      </section>
 
-          ## Breaking down the <img> attributes:
-          
-          1.) class="icon" | This class is telling the <img> tag that it should use the styling for icons found in `css/brands.css`.
+      <section class="personal">
+        <h3>Personal</h3>
 
-          2.) src="icons/[icon_name].svg" | This defines the icon you would like to display from the icons/ folder. For example, you can change this to src="icons/discord.svg" to use the Discord icon.
-          Add your own 24x24 icons to the "icons" folder to reference them. We recommend providing a SVG.
+        <a class="button" href="https://www.linkedin.com/in/federicoduca"
+          ><img class="icon" src="icons/linkedin.svg" />LinkedIn</a
+        >
 
-          3.) alt="Example Logo" | This alt attribute helps provides alternate text for an image, this can assist users who use screen readers. 
+        <a class="button" href="https://www.github.com/federicoduca"
+          ><img class="icon" src="icons/github.svg" />GitHub</a
+        >
 
-        -->
+        <a class="button" href="https://www.gitlab.com/federicoduca"
+          ><img class="icon" src="icons/gitlab.svg" />GitLab</a
+        >
 
+        <a class="button" href="https://www.datacamp.com/portfolio/federicoduca"
+          ><img class="icon" src="icons/datacamp-svgrepo-com.svg" />Datacamp</a
+        >
 
-        <a class="button button-default" href="mailto:f.duca.a@gmail.com"><img class="icon" src="icons/email.svg">
-          Contact :)</a><br>
+        <a class="button" href="https://cafecito.app/federicoduca">
+          <img class="icon" src="icons/coffee.svg" />Invite Me a Coffee
+          (Arg.)</a
+        >
+      </section>
 
-        <a class="button button-linked" href="https://www.linkedin.com/in/federicoduca"><img class="icon"
-            src="icons/linkedin.svg">LinkedIn</a><br>
+      <section class="squadra-labs">
+        <h3>Squadra Labs</h3>
+        <a class="button" href="https://www.linkedin.com/company/squadra-labs/">
+          <img class="icon" src="icons/linkedin.svg" />Squadra Labs |
+          Linkedin</a
+        >
+        <a class="button" href="https://squadralabs.com/">
+          <img class="icon" src="icons/generic-homepage.svg" />Squadra Labs |
+          Web</a
+        >
+      </section>
 
-        <a class="button button-github" href="https://www.github.com/federicoduca"><img class="icon"
-            src="icons/github.svg">GitHub</a><br>
-
-        <a class="button button-gitlab" href="https://www.gitlab.com/federicoduca"><img class="icon"
-            src="icons/gitlab.svg">GitLab</a><br>
-
-        <a class="button button-coffee" href="https://cafecito.app/federicoduca"> <img class="icon"
-            src="icons/coffee.svg">Invite Me a
-          Coffee (Arg.)</a><br>
-
-<!--         <a class="button button-web" href="https://federicoduca.github.io/my-web"><img class="icon"
-            src="icons/blog.svg"> ¿Blog?
-          (working on)</a><br> -->
-
-        <br>
-        <p>Build your own Littlelink by forking <a href="https://littlelink.io" target="_blank"
-            rel="noopener">LittleLink</a>.</p>
-
-      </div>
+      <section class="littlelink-footer">
+        <p>
+          Build your own Littlelink by forking
+          <a href="https://littlelink.io" target="_blank" rel="noopener">here</a
+          >.
+        </p>
+      </section>
     </div>
-  </div>
 
-  <!-- End Document
+    <!-- End Document
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-</body>
-
+  </body>
 </html>
