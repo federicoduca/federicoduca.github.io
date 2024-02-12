@@ -10,13 +10,14 @@
   color-scheme: light dark;
 
   --light-bg-primary: #e9e7f8;
-  --light-bg-secondary: #c4c2d1;
+  --light-bg-secondary: #e9e7f8;
   --light-button-bg: #e9e7f8;
   --light-color: color-mix(in lch, darkslategray, black);
 
-  --dark-bg-primary: #131313;
-  --dark-bg-secondary: #161616;
-  --dark-button-bg: #161616;
+  /* 202020 */
+  --dark-bg-primary: #181824;
+  --dark-bg-secondary: #181824;
+  --dark-button-bg: #181824;
   --dark-color: azure;
 }
 
@@ -24,10 +25,16 @@
   * {
     --bg-primary: var(--dark-bg-primary);
     --bg-secondary: var(--dark-bg-secondary);
+
     --button-bg: var(--dark-button-bg);
+
+    --button-shadow-distance: 4px;
+    --button-shadow-blur: 5px;
+
+    --button-shadow-primary: #0d0d1d;
+    --button-shadow-secondary: #202030;
+
     --button-focus-bright: 120%;
-    --button-shadow-primary: #101010;
-    --button-shadow-secondary: #1c1c1c;
     color: var(--dark-color);
   }
 }
@@ -36,11 +43,18 @@
   * {
     --bg-primary: var(--light-bg-primary);
     --bg-secondary: var(--light-bg-secondary);
+
     --button-bg: var(--light-button-bg);
-    --button-focus-bright: 105%;
-    color: var(--light-color);
+
+    --button-shadow-distance: 4px;
+    --button-shadow-blur: 8px;
+
     --button-shadow-primary: #b9b8c5;
     --button-shadow-secondary: #e2e0e8;
+
+    --button-focus-bright: 105%;
+
+    color: var(--light-color);
   }
   .icon {
     filter: invert(0.9);
@@ -113,7 +127,7 @@ img.avatar {
   width: 100%;
   line-height: 40px;
 
-  border-radius: 6px;
+  border-radius: 8px;
   cursor: pointer;
 
   overflow: hidden; /* Oculta el contenido que excede el contenedor */
@@ -139,13 +153,19 @@ img.avatar {
 
 .button {
   /* https://neumorphism.io/ */
-  box-shadow: 3px 3px 5px var(--button-shadow-primary),
-    -3px -3px 5px var(--button-shadow-secondary);
+  box-shadow: var(--button-shadow-distance) var(--button-shadow-distance)
+      var(--button-shadow-blur) var(--button-shadow-primary),
+    inset calc(-1 * var(--button-shadow-distance))
+      calc(-1 * var(--button-shadow-distance)) var(--button-shadow-blur)
+      var(--button-shadow-secondary);
 }
 .button:checked,
 .button:active {
-  box-shadow: inset 3px 3px 5px var(--button-shadow-primary),
-    inset -3px -3px 5px var(--button-shadow-secondary);
+  box-shadow: inset var(--button-shadow-distance) var(--button-shadow-distance)
+      var(--button-shadow-blur) var(--button-shadow-primary),
+    inset calc(-1 * var(--button-shadow-distance))
+      calc(-1 * var(--button-shadow-distance)) var(--button-shadow-blur)
+      var(--button-shadow-secondary);
 }
 
 .icon {
