@@ -8,38 +8,42 @@
 
 :root {
   color-scheme: light dark;
-  /* color: light; */
 
-  --light-bg-primary: aliceblue;
-  --light-bg-secondary: beige;
+  --light-bg-primary: #e9e7f8;
+  --light-bg-secondary: #c4c2d1;
+  --light-button-bg: #e9e7f8;
   --light-color: color-mix(in lch, darkslategray, black);
-  --light-button-color: aliceblue;
-  --light-button-bg: royalblue;
 
-  --dark-bg-primary: #000;
-  --dark-bg-secondary: #111;
-  --dark-color: aliceblue;
-  --dark-button-color: azure;
-  --dark-button-bg: royalblue;
-}
-
-@media (prefers-color-scheme: light) {
-  * {
-    --bg-primary: var(--light-bg-primary);
-    --bg-secondary: var(--light-bg-secondary);
-    color: var(--light-color);
-    --button-color: var(--light-button-color);
-    --button-bg: var(--light-button-bg);
-  }
+  --dark-bg-primary: #131313;
+  --dark-bg-secondary: #161616;
+  --dark-button-bg: #161616;
+  --dark-color: azure;
 }
 
 @media (prefers-color-scheme: dark) {
   * {
     --bg-primary: var(--dark-bg-primary);
     --bg-secondary: var(--dark-bg-secondary);
-    color: var(--dark-color);
-    --button-color: var(--dark-button-color);
     --button-bg: var(--dark-button-bg);
+    --button-focus-bright: 120%;
+    --button-shadow-primary: #101010;
+    --button-shadow-secondary: #1c1c1c;
+    color: var(--dark-color);
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  * {
+    --bg-primary: var(--light-bg-primary);
+    --bg-secondary: var(--light-bg-secondary);
+    --button-bg: var(--light-button-bg);
+    --button-focus-bright: 105%;
+    color: var(--light-color);
+    --button-shadow-primary: #b9b8c5;
+    --button-shadow-secondary: #e2e0e8;
+  }
+  .icon {
+    filter: invert(0.9);
   }
 }
 
@@ -60,7 +64,7 @@ section {
 }
 
 p {
-  margin-top: 1em;
+  margin-top: 1em 0;
 }
 
 /* Grid
@@ -81,7 +85,7 @@ h1 {
 }
 
 h3 {
-  margin-bottom: 0.15em;
+  margin-bottom: 0.5em;
 }
 
 /* Avatar
@@ -109,22 +113,39 @@ img.avatar {
   width: 100%;
   line-height: 40px;
 
+  border-radius: 6px;
   cursor: pointer;
 
   overflow: hidden; /* Oculta el contenido que excede el contenedor */
   white-space: nowrap; /* Evita que el texto se divida en múltiples líneas */
   text-overflow: ellipsis; /* Muestra puntos suspensivos (...) cuando el texto desborda */
 
-  color: var(--button-color);
   background-color: var(--button-bg);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.25);
+}
 
-  transition: transform 300ms ease;
+.button.mini-button {
+  width: auto;
+  line-height: 1.5;
+  vertical-align: text-bottom;
+  /* background-color: slategray; */
+  padding: 0 0.5em;
+  margin: 0 0.2em;
 }
 
 .button:hover,
 .button:focus {
-  transform: scale(1.025);
+  filter: brightness(var(--button-focus-bright));
+}
+
+.button {
+  /* https://neumorphism.io/ */
+  box-shadow: 3px 3px 5px var(--button-shadow-primary),
+    -3px -3px 5px var(--button-shadow-secondary);
+}
+.button:checked,
+.button:active {
+  box-shadow: inset 3px 3px 5px var(--button-shadow-primary),
+    inset -3px -3px 5px var(--button-shadow-secondary);
 }
 
 .icon {
@@ -132,56 +153,4 @@ img.avatar {
   vertical-align: middle;
   width: 25px;
   height: 25px;
-}
-
-/* Toggle Mode
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-.theme-toggle-label {
-  margin: 0 1em;
-  display: inline-block;
-  cursor: pointer;
-}
-
-#theme-toggle {
-  display: none;
-}
-
-.theme-toggle-label {
-  width: 2rem;
-  height: 1rem;
-  display: inline-block;
-  vertical-align: middle;
-  background-color: grey; /* Color de fondo del toggle */
-  /* transition: background-color 0.3s; */
-}
-
-.theme-toggle-label:after {
-  content: "";
-  width: 1rem;
-  height: 1rem;
-  display: inline-block;
-  vertical-align: top;
-  background-color: #fff; /* Color del punto */
-  /* margin: 3px; */
-  transition: transform 0.3s;
-
-  --bg-primary: var(--light-bg-primary);
-  --bg-secondary: var(--light-bg-secondary);
-  color: var(--light-color);
-  --button-color: var(--light-button-color);
-  --button-bg: var(--light-button-bg);
-}
-
-#theme-toggle:checked + .theme-toggle-label:after {
-  transform: translateX(1rem); /* Mover el punto cuando el toggle está activo */
-  background-color: #000;
-
-  * {
-    --bg-primary: var(--dark-bg-primary);
-    --bg-secondary: var(--dark-bg-secondary);
-    color: var(--dark-color);
-    --button-color: var(--dark-button-color);
-    --button-bg: var(--dark-button-bg);
-  }
 }

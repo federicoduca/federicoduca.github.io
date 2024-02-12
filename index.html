@@ -14,10 +14,6 @@
 
     <!-- FONT
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <!-- <link
-      href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800&display=swap"
-      rel="stylesheet"
-    /> -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -27,11 +23,7 @@
 
     <!-- CSS
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-    <!-- <link rel="stylesheet" href="css/normalize.css" /> -->
     <link rel="stylesheet" href="css/main.css" />
-    <!-- <link rel="stylesheet" href="css/skeleton-auto.css" /> -->
-    <!-- css/skeleton-auto.css - css/skeleton-light.css - css/skeleton-dark.css -->
-    <!-- <link rel="stylesheet" href="css/brands.css" /> -->
 
     <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
@@ -39,15 +31,6 @@
   </head>
 
   <body>
-    <!-- ## Getting Started with LittleLink
-    This page has been built with every pre-designed button available in LittleLink by default. You can rearrange and delete as needed.
-    You can add your own brand or others brands you may need in the `css/brands.css` file. 
-    You can add custom icons to `icons/...`. It is recommended to use a 24x24 .SVG.
-    Edit the "Your Image Here" section to add your own personal branding, like a picture of yourself or your brand logo!
-    Edit the "Title" section to change the page heading. You can use something like your name, your social handle, or your brand name.
-    Edit the "Short Bio" section tell users about yourself or your brand.
-  -->
-
     <!-- Primary Page Layout
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
     <div class="container">
@@ -70,16 +53,18 @@
       <section class="contact">
         <h3>Contact</h3>
 
-        <a class="button" href="mailto:f.duca.a@gmail.com"
+        <a class="button" target="_blank" href="mailto:f.duca.a@gmail.com"
           ><img class="icon" src="icons/email.svg" /> Contact via mail</a
         >
 
-        <a class="button" href="https://zcal.co/federicoduca"
+        <a class="button" target="_blank" href="https://zcal.co/federicoduca"
           ><img class="icon" src="icons/generic-calendar.svg" /> Schedule a
           meeting</a
         >
 
-        <!-- <a class="button" href="https://www.gitlab.com/federicoduca"
+        <!-- <a class="button"
+          target="_blank"
+          href=""
           ><img class="icon" src="icons/read-cv.svg" /> Read CV</a
         > -->
       </section>
@@ -87,23 +72,39 @@
       <section class="personal">
         <h3>Personal</h3>
 
-        <a class="button" href="https://www.linkedin.com/in/federicoduca"
+        <a
+          class="button"
+          target="_blank"
+          href="https://www.linkedin.com/in/federicoduca"
           ><img class="icon" src="icons/linkedin.svg" />LinkedIn</a
         >
 
-        <a class="button" href="https://www.github.com/federicoduca"
+        <a
+          class="button"
+          target="_blank"
+          href="https://www.github.com/federicoduca"
           ><img class="icon" src="icons/github.svg" />GitHub</a
         >
 
-        <a class="button" href="https://www.gitlab.com/federicoduca"
+        <a
+          class="button"
+          target="_blank"
+          href="https://www.gitlab.com/federicoduca"
           ><img class="icon" src="icons/gitlab.svg" />GitLab</a
         >
 
-        <a class="button" href="https://www.datacamp.com/portfolio/federicoduca"
+        <a
+          class="button"
+          target="_blank"
+          href="https://www.datacamp.com/portfolio/federicoduca"
           ><img class="icon" src="icons/datacamp-svgrepo-com.svg" />Datacamp</a
         >
 
-        <a class="button" href="https://cafecito.app/federicoduca">
+        <a
+          class="button"
+          target="_blank"
+          href="https://cafecito.app/federicoduca"
+        >
           <img class="icon" src="icons/coffee.svg" />Invite Me a Coffee
           (Arg.)</a
         >
@@ -111,11 +112,15 @@
 
       <section class="squadra-labs">
         <h3>Squadra Labs</h3>
-        <a class="button" href="https://www.linkedin.com/company/squadra-labs/">
-          <img class="icon" src="icons/linkedin.svg" />Squadra Labs |
-          Linkedin</a
+        <a
+          class="button"
+          target="_blank"
+          href="https://www.linkedin.com/company/squadra-labs/"
         >
-        <a class="button" href="https://squadralabs.com/">
+          <img class="icon" src="icons/linkedin.svg" />Squadra Labs |
+          LinkedIn</a
+        >
+        <a class="button" target="_blank" href="https://squadralabs.com/">
           <img class="icon" src="icons/generic-homepage.svg" />Squadra Labs |
           Web</a
         >
@@ -124,8 +129,13 @@
       <section class="littlelink-footer">
         <p>
           Build your own Littlelink by forking
-          <a href="https://littlelink.io" target="_blank" rel="noopener">here</a
-          >.
+          <a
+            class="button mini-button"
+            href="https://littlelink.io"
+            target="_blank"
+            rel="noopener"
+            >here</a
+          >
         </p>
       </section>
     </div>
