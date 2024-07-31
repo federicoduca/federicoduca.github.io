@@ -29,12 +29,12 @@
     --button-bg: var(--dark-button-bg);
 
     --button-shadow-distance: 4px;
-    --button-shadow-blur: 5px;
+    --button-shadow-blur: 8px;
 
     --button-shadow-primary: #0d0d1d;
     --button-shadow-secondary: #202030;
 
-    --button-focus-bright: 120%;
+    --button-focus-bright: 105%;
     color: var(--dark-color);
   }
 }
@@ -61,6 +61,18 @@
   }
 }
 
+@font-face {
+  font-family: "Poppins";
+  font-weight: 300;
+  src: url("/fonts/Poppins/Poppins-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Poppins";
+  font-weight: 600;
+  src: url("/fonts/Poppins/Poppins-SemiBold.ttf") format("truetype");
+}
+
 html {
   background: linear-gradient(180deg, var(--bg-primary), var(--bg-secondary));
   background-size: contain;
@@ -68,9 +80,9 @@ html {
 }
 
 body {
-  line-height: 1.5;
-  font-weight: 300;
   font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  line-height: 1.5;
 }
 
 section {
@@ -92,9 +104,8 @@ p {
 
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
 h1 {
-  font-weight: 800;
+  font-weight: 600;
   font-size: 1.2rem;
 }
 
@@ -104,7 +115,6 @@ h3 {
 
 /* Avatar
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
 img.avatar {
   border-radius: 5px;
   width: 25%;
@@ -112,7 +122,6 @@ img.avatar {
 
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
 .button {
   display: flex;
   justify-content: center;
@@ -141,7 +150,6 @@ img.avatar {
   width: auto;
   line-height: 1.5;
   vertical-align: text-bottom;
-  /* background-color: slategray; */
   padding: 0 0.5em;
   margin: 0 0.2em;
 }
