@@ -64,13 +64,15 @@
 @font-face {
   font-family: "Poppins";
   font-weight: 300;
-  src: url("/fonts/Poppins/Poppins-Light.ttf") format("truetype");
+  src: url("/fonts/Poppins/poppins-light-webfont.woff2") format("woff2"),
+    url("/fonts/Poppins/poppins-light-webfont.woff") format("woff");
 }
 
 @font-face {
   font-family: "Poppins";
   font-weight: 600;
-  src: url("/fonts/Poppins/Poppins-SemiBold.ttf") format("truetype");
+  src: url("/fonts/Poppins/poppins-semibold-webfont.woff2") format("woff2"),
+    url("/fonts/Poppins/poppins-semibold-webfont.woff") format("woff");
 }
 
 html {
