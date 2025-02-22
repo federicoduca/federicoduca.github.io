@@ -10,14 +10,18 @@
   color-scheme: light dark;
 
   --light-bg-primary: #ffffff;
-  --light-bg-secondary: #eeeeee;
-  --light-button-bg: #edf0f4;
+  --light-bg-secondary: #ffffff;
+  --light-button-bg: #F6F8FA;
+  --light-button-border: #D5DCE3;
+  --light-button-border-hover: #D5DCE3;
   --light-color: color-mix(in lch, darkslategray, black);
 
   /* 202020 */
-  --dark-bg-primary: #181824;
-  --dark-bg-secondary: #111111;
-  --dark-button-bg: #080808;
+  --dark-bg-primary: #0D1117;
+  --dark-bg-secondary: #0D1117;
+  --dark-button-bg: #151B23;
+  --dark-button-border: #313840;
+  --dark-button-border-hover: #313840;
   --dark-color: azure;
 }
 
@@ -27,6 +31,8 @@
     --bg-secondary: var(--dark-bg-secondary);
 
     --button-bg: var(--dark-button-bg);
+    --button-border: var(--dark-button-border);
+    --button-border-hover: var(--dark-button-border-hover);
 
     color: var(--dark-color);
   }
@@ -38,8 +44,8 @@
     --bg-secondary: var(--light-bg-secondary);
 
     --button-bg: var(--light-button-bg);
-
-    --button-focus-bright: 105%;
+    --button-border: var(--light-button-border);
+    --button-border-hover: var(--light-button-border-hover);
 
     color: var(--light-color);
   }
@@ -94,8 +100,8 @@ h3 {
 /* Avatar
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 img.avatar {
-  border-radius: 5px;
-  width: 25%;
+  border-radius: 25px;
+  width: 20%;
 }
 
 /* Buttons
@@ -113,7 +119,9 @@ img.avatar {
 
   line-height: 45px;
 
-  border-radius: 40px;
+  border: var(--button-border) 1px solid;
+  border-radius: 18px;
+
   cursor: pointer;
 
   overflow: hidden; /* Oculta el contenido que excede el contenedor */
@@ -126,8 +134,8 @@ img.avatar {
 
 .button:hover,
 .button:focus {
-  filter: brightness(var(--button-focus-bright));
   background-color: var(--bg-primary);
+  border-color: var(--button-border-hover);
 }
 
 .icon {
