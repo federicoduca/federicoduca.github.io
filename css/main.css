@@ -48,19 +48,7 @@
   }
 }
 
-@font-face {
-  font-family: "Poppins";
-  font-weight: 300;
-  src: url("/fonts/Poppins/poppins-light-webfont.woff2") format("woff2"),
-    url("/fonts/Poppins/poppins-light-webfont.woff") format("woff");
-}
 
-@font-face {
-  font-family: "Poppins";
-  font-weight: 600;
-  src: url("/fonts/Poppins/poppins-semibold-webfont.woff2") format("woff2"),
-    url("/fonts/Poppins/poppins-semibold-webfont.woff") format("woff");
-}
 
 html {
   background: linear-gradient(180deg, var(--bg-primary), var(--bg-secondary));
@@ -69,8 +57,8 @@ html {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
-  font-weight: 300;
+  font-family: "Segoe UI", "Helvetica", sans-serif;
+  font-weight: 400;
   line-height: 1.5;
 }
 
@@ -93,12 +81,13 @@ p {
 
 /* Typography
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-h1 {
-  font-weight: 600;
-  font-size: 1.2rem;
+h2 {
+  font-weight: 500;
+  margin-bottom: 0.5em;
 }
 
 h3 {
+  font-weight: 500;
   margin-bottom: 0.5em;
 }
 
@@ -112,20 +101,19 @@ img.avatar {
 /* Buttons
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .button {
+
   display: flex;
-  justify-content: center;
-
-  padding: 0 1em;
+  align-items: center; /* Centra verticalmente */
+  justify-content: left; /* Centra horizontalmente */
+  gap: .8rem; /* Espacio entre el icono y el texto */
+  padding: 0 1.2rem;
   margin-bottom: 0.5rem;
-
-  display: inline-block;
 
   text-decoration: none;
 
-  width: 100%;
-  line-height: 40px;
+  line-height: 45px;
 
-  border-radius: 20px;
+  border-radius: 40px;
   cursor: pointer;
 
   overflow: hidden; /* Oculta el contenido que excede el contenedor */
@@ -135,13 +123,6 @@ img.avatar {
   background-color: var(--button-bg);
 }
 
-.button.mini-button {
-  width: auto;
-  line-height: 1.5;
-  vertical-align: text-bottom;
-  padding: 0 0.5em;
-  margin: 0 0.2em;
-}
 
 .button:hover,
 .button:focus {
@@ -150,8 +131,8 @@ img.avatar {
 }
 
 .icon {
-  padding: 0px 8px 2px 0px;
-  vertical-align: middle;
-  width: 25px;
+  width: 20px;
   height: 25px;
+  flex-shrink: 0; /* Evita que el icono se achique */
+  display: block; /* Asegura que no tenga espacios extra */
 }
