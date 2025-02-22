@@ -9,15 +9,15 @@
 :root {
   color-scheme: light dark;
 
-  --light-bg-primary: #e9e7f8;
-  --light-bg-secondary: #e9e7f8;
-  --light-button-bg: #e9e7f8;
+  --light-bg-primary: #ffffff;
+  --light-bg-secondary: #eeeeee;
+  --light-button-bg: #edf0f4;
   --light-color: color-mix(in lch, darkslategray, black);
 
   /* 202020 */
   --dark-bg-primary: #181824;
-  --dark-bg-secondary: #181824;
-  --dark-button-bg: #181824;
+  --dark-bg-secondary: #111111;
+  --dark-button-bg: #080808;
   --dark-color: azure;
 }
 
@@ -28,13 +28,6 @@
 
     --button-bg: var(--dark-button-bg);
 
-    --button-shadow-distance: 4px;
-    --button-shadow-blur: 8px;
-
-    --button-shadow-primary: #0d0d1d;
-    --button-shadow-secondary: #202030;
-
-    --button-focus-bright: 105%;
     color: var(--dark-color);
   }
 }
@@ -45,12 +38,6 @@
     --bg-secondary: var(--light-bg-secondary);
 
     --button-bg: var(--light-button-bg);
-
-    --button-shadow-distance: 4px;
-    --button-shadow-blur: 8px;
-
-    --button-shadow-primary: #b9b8c5;
-    --button-shadow-secondary: #e2e0e8;
 
     --button-focus-bright: 105%;
 
@@ -138,7 +125,7 @@ img.avatar {
   width: 100%;
   line-height: 40px;
 
-  border-radius: 8px;
+  border-radius: 20px;
   cursor: pointer;
 
   overflow: hidden; /* Oculta el contenido que excede el contenedor */
@@ -159,23 +146,7 @@ img.avatar {
 .button:hover,
 .button:focus {
   filter: brightness(var(--button-focus-bright));
-}
-
-.button {
-  /* https://neumorphism.io/ */
-  box-shadow: var(--button-shadow-distance) var(--button-shadow-distance)
-      var(--button-shadow-blur) var(--button-shadow-primary),
-    inset calc(-1 * var(--button-shadow-distance))
-      calc(-1 * var(--button-shadow-distance)) var(--button-shadow-blur)
-      var(--button-shadow-secondary);
-}
-.button:checked,
-.button:active {
-  box-shadow: inset var(--button-shadow-distance) var(--button-shadow-distance)
-      var(--button-shadow-blur) var(--button-shadow-primary),
-    inset calc(-1 * var(--button-shadow-distance))
-      calc(-1 * var(--button-shadow-distance)) var(--button-shadow-blur)
-      var(--button-shadow-secondary);
+  background-color: var(--bg-primary);
 }
 
 .icon {
